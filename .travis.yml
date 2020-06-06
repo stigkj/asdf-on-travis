@@ -6,8 +6,8 @@ install:
   - asdf plugin add nodejs
   - bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
   - asdf plugin add yarn
-  - asdf install nodejs 12.13.0
-  - asdf install yarn 1.22.4
+  - asdf install nodejs $(cat .tool-versions|awk '/nodejs/ {print $2}')
+  - asdf install yarn $(cat .tool-versions|awk '/yarn/ {print $2}')
 script:
   - asdf --version
   - node --version
