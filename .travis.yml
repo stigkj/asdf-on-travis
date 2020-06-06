@@ -4,8 +4,9 @@ before_install:
   - . $HOME/.asdf/asdf.sh
 install:
   - asdf plugin add nodejs
+  - bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
   - asdf plugin add yarn
-  - asdf install nodejs 13.14.0
+  - asdf install nodejs 12.13.0
   - asdf install yarn 1.22.4
 script:
   - asdf --version
