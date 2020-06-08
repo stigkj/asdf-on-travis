@@ -1,5 +1,7 @@
 language: java
-install: ./install-tools.sh
+install:
+  - ./install-tools.sh
+  - . $HOME/.asdf/asdf.sh
 script:
   - asdf --version
   - node --version
